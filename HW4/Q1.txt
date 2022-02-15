@@ -1,0 +1,70 @@
+[
+{
+  "name": "USC Village",
+  "popularity": 30,
+  "loc":[34.025630,-118.285076] 
+},
+{
+  "name": "McClintock",
+  "popularity": 40,
+  "loc":[34.024984,-118.287450] 
+},
+{
+  "name": "Lyon Center",
+  "popularity": 100,
+  "loc":[34.024481,-118.288453] 
+},
+{
+  "name": "Galen Center",
+  "popularity": 80,
+  "loc":[34.022978,-118.287142] 
+},
+{
+  "name": "Annenberg",
+  "popularity": 20,
+  "loc":[34.022042,-118.286044] 
+},
+{
+  "name": "Wallis A_Hall",
+  "popularity": 30,
+  "loc":[34.021023,-118.287146] 
+},
+{
+  "name": "Dornsife",
+  "popularity": 20,
+  "loc":[34.021268,-118.285081] 
+},
+{
+  "name": "PFS Fountain",
+  "popularity": 70,
+  "loc":[34.020233,-118.285224] 
+},
+{
+  "name": "IPA Center",
+  "popularity": 40,
+  "loc":[34.021337,-118.284013] 
+},
+{
+  "name": "Viterbi",
+  "popularity": 90,
+  "loc":[34.020325,-118.290004] 
+},
+{
+  "name": "CS Department",
+  "popularity": 90,
+  "loc":[34.019454,-118.289563] 
+},
+{
+  "name": "Fisher Museum",
+  "popularity": 50,
+  "loc":[34.018626,-118.287356] 
+},
+{
+  "name": "Apartment",
+  "popularity": 10,
+  "loc":[34.056897,-118.303993] 
+}
+]
+
+
+{loc:{$geoWithin:{$box:[[34.022042,-118.303993],[34.056897,-118.285076]]}}}
