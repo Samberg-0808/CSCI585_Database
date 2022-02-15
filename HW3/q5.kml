@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>USC Village</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.285076,34.025630</coordinates></Point>
+</Placemark>
+<Placemark><name>McClintock</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.287450,34.024984</coordinates></Point>
+</Placemark>
+<Placemark><name>Lyon Center</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.288453,34.024481</coordinates></Point>
+</Placemark>
+<Placemark><name>Galen Center</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.287142,34.022978</coordinates></Point>
+</Placemark>
+<Placemark><name>Annenberg</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.286044,34.022042</coordinates></Point>
+</Placemark>
+<Placemark><name>Wallis A_Hall</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.287146,34.021023</coordinates></Point>
+</Placemark>
+<Placemark><name>Dornsife</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.285081,34.021268</coordinates></Point>
+</Placemark>
+<Placemark><name>PFS Fountain</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.285224,34.020233</coordinates></Point>
+</Placemark>
+<Placemark><name>IPA Center</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.284013,34.021337</coordinates></Point>
+</Placemark>
+<Placemark><name>Viterbi</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.290004,34.020325</coordinates></Point>
+</Placemark>
+<Placemark><name>CS Department</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.289563,34.019454</coordinates></Point>
+</Placemark>
+<Placemark><name>Fisher Museum</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.287356,34.018626</coordinates></Point>
+</Placemark>
+<Placemark><name>Apartment</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.303993,34.056897</coordinates></Point>
+</Placemark>
+<Placemark>
+<name>Convex Hull</name>
+<Polygon>
+    <extrude>1</extrude>
+    <altitudeMode>relativeToGround</altitudeMode>
+    <outerBoundaryIs>
+    <LinearRing>
+        <coordinates>
+        -118.287356,34.018626,10 
+        -118.289563,34.019454,10
+        -118.290004,34.020325,10
+        -118.303993,34.056897,10
+        -118.285076,34.02563,10
+        -118.284013,34.021337,10
+        -118.285224,34.020233,10
+        -118.287356,34.018626,10
+        </coordinates>
+    </LinearRing>
+    </outerBoundaryIs>
+</Polygon>
+</Placemark>
+<Placemark>
+<name>NearestNeighbors1</name>
+    <LineString>
+        <tessellate>1</tessellate>
+        <coordinates> -118.303993,34.056897,0
+        -118.287450,34.024984,0 </coordinates>
+    </LineString>
+</Placemark>
+<Placemark>
+<name>NearestNeighbors2</name>
+    <LineString>
+        <tessellate>1</tessellate>
+        <coordinates> -118.303993,34.056897,0
+        -118.288453,34.024481,0 </coordinates>
+    </LineString>
+</Placemark>
+<Placemark>
+<name>NearestNeighbors3</name>
+    <LineString>
+        <tessellate>1</tessellate>
+        <coordinates> -118.303993,34.056897,0
+        -118.285076,34.025630,0 </coordinates>
+    </LineString>
+</Placemark>
+<Placemark>
+<name>NearestNeighbors4</name>
+    <LineString>
+        <tessellate>1</tessellate>
+        <coordinates> -118.303993,34.056897,0
+        -118.287142,34.022978,0 </coordinates>
+    </LineString>
+</Placemark>
+</Document></kml>

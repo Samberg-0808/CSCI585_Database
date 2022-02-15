@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>OL</title>
+<script src="https://openlayers.org/api/OpenLayers.js">
+</script>
+<style>
+#map {
+    width:400px;
+    height:400px;
+}
+</style>
+</head>
+
+<body>
+<div id="map"></div>
+
+
+<script>
+// your JS code 
+console.log("Hola, all!");
+alert("Hello JS World!");
+
+// my data is a label/ID for what we store, which is the object stored in variable d, 
+// whose value is {"k1":[{"a":5, "b":-6}]}, which consists of a key called k1 
+// with an array as its value: [{"a":5, "b":-6}]
+var d = {"USC_Village":[{"long":-118.285076, "lat":34.025630}],"McClintock":[{"long":-118.287450, "lat":34.024984}],"Lyon_Center":[{"long":-118.288453, "lat":34.024481}],"Galen_Center":[{"long":-118.287142, "lat":34.022978}],"Annenberg":[{"long":-118.286044, "lat":34.022042}],"Wallis_A_Hall":[{"long":-118.287146, "lat":34.021023}],"Dornsife":[{"long":-118.285081, "lat":34.021268}],"PFS_Fountain":[{"long":-118.285224, "lat":34.020233}],"IPA_Center":[{"long":-118.284013, "lat":34.021337}],"Viterbi":[{"long":-118.290004, "lat":34.020325}],"CS_Department":[{"long":-118.289563, "lat":34.019454}],"Fisher_Museum":[{"long":-118.287356, "lat":34.018626}],"Apartment":[{"long":-118.303993, "lat":34.056897}]};
+localStorage.setItem("myData",JSON.stringify(d));
+// you'd need to modify the above, to store all your points
+
+
+//next [presumably after closing the browser, and reloading our html]
+// we can fetch the stored data, just by supplying its key:
+var dataStored = JSON.parse(localStorage.getItem("myData"));
+// verify that we fetched our data correctly
+console.log(dataStored); 
+// we can iterate through our array [of points], like so:
+var a = dataStored.McClintock; // a will contain our array
+for(var indx in a) { // indx is 0,1,2...
+  console.log(a[indx]); // this could be a single point
+}
+
+// here's how to plot points on a map, using OpenLayers:
+// [this is code I mildly modified, from an existing source]
+function initMap() {
+        map = new OpenLayers.Map('map');
+        basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+        map.addLayer(basemap);
+        markers = new OpenLayers.Layer.Markers("Markers");
+        map.addLayer(markers);
+}// initMap()
+
+function addMarker(latitude, longitude) {
+        var lonLat = new OpenLayers.LonLat(longitude, latitude)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                map.getProjectionObject() // to Spherical Mercator Projection
+        );
+        var point = new OpenLayers.Marker(lonLat);
+        markers.addMarker(point);
+        map.setCenter(lonLat, 8); // second arg is zoom level
+        //console.log(latitude + ", " + longitude);
+}// addMarker()
+
+
+// load and setup map layers
+initMap();
+
+// here's how to plot just ONE [lat,long] on the map! 
+//addMarker(35,-118); // somewhere in SoCal...
+var usc_village = dataStored.USC_Village;
+addMarker(usc_village[0]["lat"],usc_village[0]["long"]);
+var mcclintock = dataStored.McClintock;
+addMarker(mcclintock[0]["lat"],mcclintock[0]["long"]);
+var lyon = dataStored.Lyon_Center;
+addMarker(lyon[0]["lat"],lyon[0]["long"]);
+var galen = dataStored.Galen_Center;
+addMarker(galen[0]["lat"],galen[0]["long"]);
+var annenberg = dataStored.Annenberg;
+addMarker(annenberg[0]["lat"],annenberg[0]["long"]);
+var wills = dataStored.Wallis_A_Hall;
+addMarker(wills[0]["lat"],wills[0]["long"]);
+var dornsife = dataStored.Dornsife;
+addMarker(dornsife[0]["lat"],dornsife[0]["long"]);
+var pfs = dataStored.PFS_Fountain;
+addMarker(pfs[0]["lat"],pfs[0]["long"]);
+var ipa = dataStored.IPA_Center;
+addMarker(ipa[0]["lat"],ipa[0]["long"]);
+var viterbi = dataStored.Viterbi;
+addMarker(viterbi[0]["lat"],viterbi[0]["long"]);
+var cs = dataStored.CS_Department;
+addMarker(cs[0]["lat"],cs[0]["long"]);
+var fisher = dataStored.Fisher_Museum;
+addMarker(fisher[0]["lat"],fisher[0]["long"]);
+var apt = dataStored.Apartment;
+addMarker(apt[0]["lat"],apt[0]["long"]);
+</script>
+
+</body>
+
+</html>
